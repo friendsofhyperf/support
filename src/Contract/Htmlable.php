@@ -8,16 +8,12 @@ declare(strict_types=1);
  * @document https://github.com/friendsofhyperf/components/blob/main/README.md
  * @contact  huangdijia@gmail.com
  */
-namespace FriendsOfHyperf\Support\Pipeline;
+namespace FriendsOfHyperf\Support\Contract;
 
-interface HubInterface
+interface Htmlable
 {
     /**
-     * Send an object through one of the available pipelines.
-     *
-     * @param mixed $object
-     * @param string|null $pipeline
-     * @return mixed
+     * Get content as a string of HTML.
      */
-    public function pipe($object, $pipeline = null);
+    public function toHtml(): string;
 }
